@@ -1,0 +1,8 @@
+org\example\KafkaStreamsDemo.class
+org\example\Main.class
+org\example\SimpleProducer.class
+org\example\UserBehaviorCsvFileReader.class
+org\example\Weather.class
+org\example\KafkaProducer.class
+org\example\SimpleConsumer.class
+org\example\JsonSerializer.class
