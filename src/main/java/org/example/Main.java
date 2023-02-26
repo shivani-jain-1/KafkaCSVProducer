@@ -9,7 +9,7 @@ public class Main {
         // File address
         String filePath = "C:\\kafka_2.13-3.4.0\\tmp\\weather1.csv";
         // kafka topic
-        String topic = "weather-topic";
+        String topic = "weather-report";
         // Kafka borker address
         String broker = "localhost:9092";
 

@@ -25,4 +25,11 @@ public class JsonSerializer {
         }
     }
 
+    public byte[] keyToJSONBytes(String r) {
+        try {
+            return jsonMapper.writeValueAsBytes(r);
+        } catch (JsonProcessingException e) {
+            throw new IllegalArgumentException("Could not serialize record: " + r, e);
+        }
+    }
 }

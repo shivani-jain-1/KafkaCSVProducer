@@ -23,8 +23,10 @@ public class KafkaProducer implements Consumer<Weather> {
     public void accept(Weather record) {
         // Serialize the object into a byte array
         byte[] data = serializer.toJSONBytes(record);
+        byte[] key = serializer.keyToJSONBytes("weatherreport-place2");
+
         // package
-        ProducerRecord<byte[], byte[]> kafkaRecord = new ProducerRecord<>(topic, data);
+        ProducerRecord<byte[], byte[]> kafkaRecord = new ProducerRecord<>(topic,key, data);
         // send
         producer.send(kafkaRecord);
         System.out.println("Message sent successfully");
